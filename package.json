@@ -1,7 +1,7 @@
 {
-  "name": "vacation-planner-api",
+  "name": "art-gallery-project-api",
   "version": "1.0.0",
-  "description": "The API for the vacation-planner-app",
+  "description": "The API for the art-gallery-project-api",
   "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
