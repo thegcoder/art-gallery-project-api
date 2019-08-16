@@ -4,11 +4,11 @@ const { ArtWorks, Artists, Genre } = require('../models');
 async function all(type) {
     let data = Promise.resolve(false);
     switch (type) {
-        case 'ArtWorks':
+        case 'artworks':
             data = await ArtWorks.find({});
             return data;
             break;
-        case 'users':
+        case 'artists':
             data = await Artists.find({});
             return data;
             break;
@@ -23,7 +23,7 @@ async function create(type, object) {
     console.log(`Type: ${type}`);
     console.log(object);
     switch (type) {
-        case 'ArtWorks':
+        case 'artworks':
             data = await ArtWorks.create(object);
             return data;
             break;
@@ -40,7 +40,7 @@ async function create(type, object) {
 async function read(type, id) {
     let data = Promise.resolve(false);
     switch (type) {
-        case 'ArtWorks':
+        case 'artworks':
             data = await ArtWorks.findById(id);
             return data;
             break;

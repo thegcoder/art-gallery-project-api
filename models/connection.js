@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/vacation-planner-app';
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost/art-gallery-project-api';
 
 mongoose.connect(connectionString, { useNewUrlParser: true})
   .then(() => {

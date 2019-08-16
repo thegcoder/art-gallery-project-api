@@ -17,7 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon node index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "local:start": "source .env && npm start"
   },
   "author": "Tai Glover-Slaton",
   "license": "ISC"
