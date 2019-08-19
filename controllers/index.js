@@ -1,4 +1,4 @@
-const { ArtWorks, Artists, Genre } = require('../models');
+const { ArtWorks, Artists, Genres } = require('../models');
 
 // Get All
 async function all(type) {
@@ -12,7 +12,11 @@ async function all(type) {
             data = await Artists.find({});
             return data;
             break;
-        default:
+        case 'genre':
+            data = await Genres.find({});
+            return data;
+            break;
+            default:
             return data;
     }
 }
@@ -31,6 +35,10 @@ async function create(type, object) {
             data = await Artists.create(object);
             return data;
             break;
+        case 'genre':
+            data = await Genres.create(object);
+            return data;
+            break;
         default:
             return data;
     }
@@ -45,7 +53,11 @@ async function read(type, id) {
             return data;
             break;
         case 'artists':
-            data = await artists.findById(id);
+            data = await Artists.findById(id);
+            return data;
+            break;
+        case 'genre':
+            data = await Genres.findById(id);
             return data;
             break;
         default:
@@ -65,6 +77,10 @@ async function update(type, id, object) {
             data = await Artists.findByIdAndUpdate(id, object, {new: true, upsert: true});
             return data;
             break;
+        case 'genres':
+            data = await Genres.findByIdAndUpdate(id, object, {new: true, upsert: true});
+            return data;
+            break;
         default:
             return data;
     }
@@ -79,6 +95,9 @@ async function deleter(type, id) {
             return data;
         case 'artists':
             data = await Artists.findByIdAndDelete(id);
+            return data;
+        case 'genres':
+            data = await Genres.findByIdAndDelete(id);
             return data;
         default:
             return data;
