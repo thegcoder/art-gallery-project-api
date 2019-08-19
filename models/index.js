@@ -60,7 +60,7 @@ const GenreSchema = new mongoose.Schema({
 });
 
 // ArtWorks collection
-const ArtWorks = mongoose.model('ArtWorks', ArtworkSchema);
+const ArtWorks = mongoose.model('ArtWorks', ArtWorkSchema);
 
 // Users collection
 const Artists = mongoose.model('Artists', ArtistSchema);
@@ -70,7 +70,7 @@ const Genres = mongoose.model('Genres', GenreSchema);
 
 
 module.exports = {
-  Artworks,
+  ArtWorks,
   Artists,
   Genres
 }
