@@ -4,7 +4,7 @@ const routes = (app, controllers) => {
   *
   * /api/all/{type}:
   *    get:
-  *      description: View all artwork or artist
+  *      description: View all artworks artists or genres
   *      produces:
   *        - application/json
   *      parameters:
@@ -33,7 +33,7 @@ const routes = (app, controllers) => {
   *
   * /api/create/{type}:
   *    post:
-  *      summary: Creates artworks and artists
+  *      summary: Creates artworks artists or genres
   *      produces:
   *        - application/json
   *      parameters:
@@ -66,7 +66,7 @@ const routes = (app, controllers) => {
   *
   * /api/read/{type}/{id}:
   *    get:
-  *      description: View all artworks or artist
+  *      description: View all artworks artists or genres
   *      produces:
   *        - application/json
   *      parameters:
@@ -102,7 +102,7 @@ const routes = (app, controllers) => {
   *
   * /api/update/{type}/{id}:
   *    post:
-  *      summary: Creates artworks or artist
+  *      summary: Creates artworks artists or genres
   *      produces:
   *        - application/json
   *      parameters:
@@ -142,7 +142,7 @@ const routes = (app, controllers) => {
   *
   * /api/delete/{type}/{id}:
   *    post:
-  *      summary: Creates artworks or artists
+  *      summary: Creates artworks artists or genres
   *      produces:
   *        - application/json
   *      parameters:
