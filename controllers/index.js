@@ -12,7 +12,7 @@ async function all(type) {
             data = await Artists.find({});
             return data;
             break;
-        case 'genre':
+        case 'genres':
             data = await Genres.find({});
             return data;
             break;
@@ -35,7 +35,7 @@ async function create(type, object) {
             data = await Artists.create(object);
             return data;
             break;
-        case 'genre':
+        case 'genres':
             data = await Genres.create(object);
             return data;
             break;
@@ -56,7 +56,7 @@ async function read(type, id) {
             data = await Artists.findById(id);
             return data;
             break;
-        case 'genre':
+        case 'genres':
             data = await Genres.findById(id);
             return data;
             break;
