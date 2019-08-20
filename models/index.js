@@ -6,9 +6,6 @@ const ArtWorkSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    city: {
-        type: String
-    },
     description: String,
     imageUrl: {
         type: String,
@@ -32,7 +29,6 @@ const ArtistSchema = new mongoose.Schema({
         type: String,
         default: 'https://place-hold.it/300x500'
     },
-    destinations: [],
     type: {
         type: String,
         default: 'artists'
@@ -41,11 +37,7 @@ const ArtistSchema = new mongoose.Schema({
 
 // Genre schema
 const GenreSchema = new mongoose.Schema({
-    country: {
-        type: String,
-        required: true
-    },
-    city: {
+    name: {
         type: String
     },
     description: String,
