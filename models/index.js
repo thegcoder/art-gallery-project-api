@@ -38,7 +38,9 @@ const ArtistSchema = new mongoose.Schema({
 // Genre schema
 const GenreSchema = new mongoose.Schema({
     name: {
-        type: String
+        type: String,
+        required: true,
+        unique: true
     },
     description: String,
     imageUrl: {
